@@ -6,8 +6,14 @@ I have written this for development of internal unity cheats. So I just use the 
 
 ## How does this work?
 First call SetupConsole() then add the Logger object to the GameObject as component
+Example Init file:
 ```cs
-GameObject gObj = new GameObject();
-Base.Logger.SetupConsole();
-gObj.AddComponent<Base.Logger>();
+gameObject = new GameObject();
+Logger.SetupConsole();
+Logger.Log("Console Setup!", LogType.Magenta);
+Logger.Log("Adding Logger Component...", LogType.Warning);
+gameObject.AddComponent<Logger>();
+Logger.Log("Set obj to not destroy on load...", LogType.Warning);
+GameObject.DontDestroyOnLoad(gameObject);
+Logger.Log("Everything setup!", LogType.Success);
 ```
