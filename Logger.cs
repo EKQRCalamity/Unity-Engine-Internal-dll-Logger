@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 
-namespace AliceCradles2
+namespace Logging
 {
     enum LogType
     {
